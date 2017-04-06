@@ -6,35 +6,10 @@
 
 // Paddings
 .padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-.padded-top-light {
-  padding-top: 3rem;
-}
-
-.padded-bottom-light {
-  padding-bottom: 3rem;
-}
-
-.padded-bottom {
-  padding-bottom: 5rem
-}
-
-// width
-
-.half-page-width {
-  max-width: 50%;
-}
-
-// flex
-
-.flex-row-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 // Backgrounds
 .bg-black {
   background: #4a4a4a;
@@ -47,4 +22,14 @@
 }
 .bg-dark-blue {
   background: #3b5998;
+}
+
+.bg-white{
+  background: white;
+}
+
+//helpers
+
+.header{
+  margin-bottom: 50px;
 }

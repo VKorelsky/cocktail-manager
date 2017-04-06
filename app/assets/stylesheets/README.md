@@ -25,7 +25,7 @@ $ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheet
 $ unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Don't forget the sprockets directives in `assets/javascripts/application.js`
+Don't forget the sprockets directives in `assets/application.js`
 
 ```javascript
 // app/assets/javascripts/application.js
@@ -60,12 +60,12 @@ Look at your main `application.scss` file to see how SCSS files are imported.
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "vendor/index";
 
 // Your CSS
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
+@import "vendor/index";
 ```
 
 For every folder (**`components`**, **`layout`**, **`pages`**, **`vendor`**), there is one `_index.scss` partial which is responsible for importing all the other partials of its folder.
@@ -91,7 +91,7 @@ For every folder (**`components`**, **`layout`**, **`pages`**, **`vendor`**), th
 
 ## Navbar template
 
-Our `layout/_navbar.scss` code works well with our home-made ERB template which you can find
+Our `layout/_navbar.scss` code works well with our home-made ERB template which you can find 
 
 - [version without login](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar_wagon_without_login.html.erb).
 - [version with login](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar_wagon.html.erb).
