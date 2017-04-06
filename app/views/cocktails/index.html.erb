@@ -1,11 +1,13 @@
 <div class="container">
-    <h1 class="text-center padded-bottom">Cocktail Manager</h1>
-    <div class="row">
-      <% @cocktails.each do |c|  %>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <h2><%= c.name %></h2>
-      </div>
-      <% end  %>
+    <h1 class="padded-bottom">Cocktail Manager</h1>
 
-    </div>
+    <div class="row">
+        <ul>
+          <% @cocktails.each do |c|  %>
+              <li><%= link_to c.name, cocktail_path(c) %></li>
+          <% end  %>
+        </ul>
+      </div>
+
+    <%= link_to "Add a new cocktail", new_cocktail_path  %>
 </div>
