@@ -11,7 +11,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(params[:cocktail_id].to_i)
     else
-      render :new
+      redirect_to cocktail_path(params[:cocktail_id].to_i)
     end
   end
 
