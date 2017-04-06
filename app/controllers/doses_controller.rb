@@ -11,7 +11,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(params[:cocktail_id].to_i)
     else
-      redirect_to cocktail_path(params[:cocktail_id].to_i)
+      redirect_to controller: 'cocktails', action: 'show', id: params[:cocktail_id].to_i, error: @dose.errors.messages
     end
   end
 
